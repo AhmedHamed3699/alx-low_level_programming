@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <math.h>
 /**
  * main - entry point
  * prints the first 50 Fibonacci numbers
@@ -8,18 +8,18 @@
  */
 int main(void)
 {
-	unsigned long int f1, f2, f;
+	long double f1, f2, f;
 	int i;
 
 	f1 = 0;
 	f2 = 1;
 	for (i = 1; i < 98; i++)
 	{
-		f = f1 + f2;
+		f = f2 + f1;
 		f1 = f2;
 		f2 = f;
-		printf("%lu, ", f);
+		printf("%.0Lf, ", f2);
 	}
-	printf("%lu\n", f1 + f2);
+	printf("%.0Lf\n", f + f1);
 	return (0);
 }
