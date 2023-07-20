@@ -22,6 +22,9 @@ int main(void)
 		}
 		i++;
 	}
+	if (n != 1)
+		ans = n;
+
 	printf("%ld\n", ans);
 	return (0);
 }
