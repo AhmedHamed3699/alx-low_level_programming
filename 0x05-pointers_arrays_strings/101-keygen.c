@@ -12,11 +12,12 @@
  */
 int main(void)
 {
-	srand(time(0));
-	char pass[100], *tmp;
+	int pass[100];
+	int *tmp;
 	int i;
 	char r;
-
+	
+	srand(time(0));
 	i = 0;
 	tmp = pass;
 	r = (rand() % 94) + 33;
@@ -30,6 +31,11 @@ int main(void)
 	*tmp = 2772 - i;
 	tmp++;
 	*tmp = '\0';
-	printf("%s", pass);
+	i = 0;
+	while (pass[i] != '\0')
+	{
+		printf("%c", pass[i]);
+		i++;
+	}
 	return (0);
 }
