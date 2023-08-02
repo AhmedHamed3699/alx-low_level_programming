@@ -1,4 +1,5 @@
 #include "main.h"
+#define uli unsigned long int
 
 /**
  * binary_search - fast search function
@@ -9,13 +10,13 @@
  * Return: root of numbet if exists
  * -1 otherwise
  */
-int binary_search(int l, int r, int x)
+int binary_search(uli l, uli r, uli x)
 {
-	int mid;
+	uli  mid;
 
 	if (l > r)
 		return (-1);
-	mid = (l + r) / 2;
+	mid = l + (r - l) / 2;
 
 	if ((mid * mid) == x)
 		return (mid);
