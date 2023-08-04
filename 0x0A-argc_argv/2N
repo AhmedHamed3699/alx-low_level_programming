@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - program entry
+ * adds positive numbers
+ * @argc: number of arguments passed to program
+ * @argv: array of all arguments
+ *
+ * Return: 0 if all arguments are digits
+ * 1 otherwise
+ */
+int main(int argc, char *argv[])
+{
+	if (argc < 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
+	return (0);
+}
