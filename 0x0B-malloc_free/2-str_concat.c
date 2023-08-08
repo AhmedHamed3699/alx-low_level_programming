@@ -14,9 +14,6 @@ char *str_concat(char *s1, char *s2)
 	char *newStr;
 	unsigned int i, size1, size2;
 
-	if (!s1 && !s2)
-		return (NULL);
-
 	size1 = 0;
 	while (s1 && s1[size1] != '\0')
 		size1++;
@@ -24,7 +21,7 @@ char *str_concat(char *s1, char *s2)
 	while (s2 && s2[size2] != '\0')
 		size2++;
 
-	newStr = (char *) malloc(sizeof(char) * (size1 + size2));
+	newStr = (char *) malloc(sizeof(char) * (size1 + size2 + 1));
 	if (newStr == NULL)
 		return (NULL);
 
