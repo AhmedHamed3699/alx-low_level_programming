@@ -23,12 +23,12 @@ int main(int ac, char **av)
 	a = atoi(av[1]);
 	b = atoi(av[3]);
 	op_func = get_op_func(av[2]);
-	if (op_func == NULL)
+	if (op_func == NULL || av[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%i\n", op_func(a, b));
+	printf("%d\n", op_func(a, b));
 	return (0);
 }
