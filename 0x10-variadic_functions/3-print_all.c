@@ -14,9 +14,11 @@ void print_all(const char * const format, ...)
 	unsigned int i, size;
 	char *tmp, *sep;
 
-	if (format == NULL)
-		return;
-	size = strlen(format);
+
+	size = 0;
+	if (format != NULL)
+		size = strlen(format);
+
 	va_start(ap, format);
 	i = 0;
 	sep = "";
